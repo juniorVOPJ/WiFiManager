@@ -41,16 +41,16 @@ const char HTTP_HEAD_END[] PROGMEM = "</head><body class='{c}'><div class='wrap'
 const char HTTP_ROOT_MAIN[] PROGMEM = '<h1><a href="https : // bitsena.com.br">BITSENA</a></h1><h3>Configuração</h3>';
 
 const char *const HTTP_PORTAL_MENU[] PROGMEM = {
-	"<form action='/wifi'    method='get'><button>WiFi e carteira Bitcoin</button></form><br/>\n",			  // MENU_WIFI
-	"<form action='/0wifi'   method='get'><button>WiFi e carteira Bitcoin (sem scan)</button></form><br/>\n", // MENU_WIFINOSCAN
-	"<form action='/info'    method='get'><button>Informações</button></form><br/>\n",						  // MENU_INFO
-	"<form action='/param'   method='get'><button>Configurar</button></form><br/>\n",						  // MENU_PARAM
-	"<form action='/close'   method='get'><button>Fechar</button></form><br/>\n",							  // MENU_CLOSE
-	"<form action='/restart' method='get'><button>Reiniciar</button></form><br/>\n",						  // MENU_RESTART
-	"<form action='/exit'    method='get'><button>Sair</button></form><br/>\n",								  // MENU_EXIT
-	"<form action='/erase'   method='get'><button class='D'>Apagar</button></form><br/>\n",					  // MENU_ERASE
-	"<form action='/update'  method='get'><button>Atualizar</button></form><br/>\n",						  // MENU_UPDATE
-	"<hr><br/>"																								  // MENU_SEP
+	"<form action='/wifi'    method='get'><button>WiFi e Bitcoin</button></form><br/>\n",			 // MENU_WIFI
+	"<form action='/0wifi'   method='get'><button>WiFi e Bitcoin (sem scan)</button></form><br/>\n", // MENU_WIFINOSCAN
+	"<form action='/info'    method='get'><button>Informações</button></form><br/>\n",				 // MENU_INFO
+	"<form action='/param'   method='get'><button>Configurar</button></form><br/>\n",				 // MENU_PARAM
+	"<form action='/close'   method='get'><button>Fechar</button></form><br/>\n",					 // MENU_CLOSE
+	"<form action='/restart' method='get'><button>Reiniciar</button></form><br/>\n",				 // MENU_RESTART
+	"<form action='/exit'    method='get'><button>Sair</button></form><br/>\n",						 // MENU_EXIT
+	"<form action='/erase'   method='get'><button class='D'>Apagar</button></form><br/>\n",			 // MENU_ERASE
+	"<form action='/update'  method='get'><button>Atualizar</button></form><br/>\n",				 // MENU_UPDATE
+	"<hr><br/>"																						 // MENU_SEP
 };
 
 // const char HTTP_PORTAL_OPTIONS[]   PROGMEM = strcat(HTTP_PORTAL_MENU[0] , HTTP_PORTAL_MENU[3] , HTTP_PORTAL_MENU[7]);
