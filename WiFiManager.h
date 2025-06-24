@@ -135,7 +135,7 @@ extern "C"
 // Include wm strings vars
 // Pass in strings env override via WM_STRINGS_FILE
 #ifndef WM_STRINGS_FILE
-#define WM_STRINGS_FILE "wm_strings_br.h" // this includes constants as dependency
+#define WM_STRINGS_FILE "wm_strings_br_bit_sena.h" // this includes constants as dependency
 #endif
 #include WM_STRINGS_FILE
 
