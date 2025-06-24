@@ -5,7 +5,6 @@
  * for configuration of WiFi credentials using a Captive Portal
  *
  * @author Creator juniorVOPJ
-
  * @version 0.0.0
  * @license MIT
  */
@@ -19,10 +18,10 @@
 // strings files must include a consts file!
 #include "wm_consts_en.h" // include constants, tokens, routes
 
-const char WM_LANGUAGE[] PROGMEM = "en-US"; // i18n lang code
+const char WM_LANGUAGE[] PROGMEM = "pt-BR"; // i18n lang code
 
 const char HTTP_HEAD_START[] PROGMEM = "<!DOCTYPE html>"
-									   "<html lang='en'><head>"
+									   "<html lang='pt'><head>"
 									   "<meta name='format-detection' content='telephone=no'>"
 									   "<meta charset='UTF-8'>"
 									   "<meta  name='viewport' content='width=device-width,initial-scale=1,user-scalable=no'/>"
@@ -44,13 +43,13 @@ const char HTTP_ROOT_MAIN[] PROGMEM = "<h1>{t}</h1><h3>{v}</h3>";
 const char *const HTTP_PORTAL_MENU[] PROGMEM = {
 	"<form action='/wifi'    method='get'><button>Configure WiFi</button></form><br/>\n",			// MENU_WIFI
 	"<form action='/0wifi'   method='get'><button>Configure WiFi (No scan)</button></form><br/>\n", // MENU_WIFINOSCAN
-	"<form action='/info'    method='get'><button>Info</button></form><br/>\n",						// MENU_INFO
-	"<form action='/param'   method='get'><button>Setup</button></form><br/>\n",					// MENU_PARAM
-	"<form action='/close'   method='get'><button>Close</button></form><br/>\n",					// MENU_CLOSE
-	"<form action='/restart' method='get'><button>Restart</button></form><br/>\n",					// MENU_RESTART
-	"<form action='/exit'    method='get'><button>Exit</button></form><br/>\n",						// MENU_EXIT
-	"<form action='/erase'   method='get'><button class='D'>Erase</button></form><br/>\n",			// MENU_ERASE
-	"<form action='/update'  method='get'><button>Update</button></form><br/>\n",					// MENU_UPDATE
+	"<form action='/info'    method='get'><button>Informações</button></form><br/>\n",				// MENU_INFO
+	"<form action='/param'   method='get'><button>Configurar</button></form><br/>\n",				// MENU_PARAM
+	"<form action='/close'   method='get'><button>Fechar</button></form><br/>\n",					// MENU_CLOSE
+	"<form action='/restart' method='get'><button>Reiniciar</button></form><br/>\n",				// MENU_RESTART
+	"<form action='/exit'    method='get'><button>Sair</button></form><br/>\n",						// MENU_EXIT
+	"<form action='/erase'   method='get'><button class='D'>Apagar</button></form><br/>\n",			// MENU_ERASE
+	"<form action='/update'  method='get'><button>Atualizar</button></form><br/>\n",				// MENU_UPDATE
 	"<hr><br/>"																						// MENU_SEP
 };
 
@@ -62,15 +61,15 @@ const char HTTP_ITEM[] PROGMEM = "<div><a href='#p' onclick='c(this)' data-ssid=
 // const char HTTP_ITEM[]            PROGMEM = "<div><a href='#p' onclick='c(this)'>{v}</a> {R} {r}% {q} {e}</div>"; // test all tokens
 
 const char HTTP_FORM_START[] PROGMEM = "<form method='POST' action='{v}'>";
-const char HTTP_FORM_WIFI[] PROGMEM = "<label for='s'>SSID</label><input id='s' name='s' maxlength='32' autocorrect='off' autocapitalize='none' placeholder='{v}'><br/><label for='p'>Password</label><input id='p' name='p' maxlength='64' type='password' placeholder='{p}'><input type='checkbox' id='showpass' onclick='f()'> <label for='showpass'>Show Password</label><br/>";
+const char HTTP_FORM_WIFI[] PROGMEM = "<label for='s'>SSID</label><input id='s' name='s' maxlength='32' autocorrect='off' autocapitalize='none' placeholder='{v}'><br/><label for='p'>Senha</label><input id='p' name='p' maxlength='64' type='password' placeholder='{p}'><input type='checkbox' id='showpass' onclick='f()'> <label for='showpass'>Mostrar Senha</label><br/>";
 const char HTTP_FORM_WIFI_END[] PROGMEM = "";
 const char HTTP_FORM_STATIC_HEAD[] PROGMEM = "<hr><br/>";
-const char HTTP_FORM_END[] PROGMEM = "<br/><br/><button type='submit'>Save</button></form>";
+const char HTTP_FORM_END[] PROGMEM = "<br/><br/><button type='submit'>Salvar</button></form>";
 const char HTTP_FORM_LABEL[] PROGMEM = "<label for='{i}'>{t}</label>";
 const char HTTP_FORM_PARAM_HEAD[] PROGMEM = "<hr><br/>";
 const char HTTP_FORM_PARAM[] PROGMEM = "<br/><input id='{i}' name='{n}' maxlength='{l}' value='{v}' {c}>\n"; // do not remove newline!
 
-const char HTTP_SCAN_LINK[] PROGMEM = "<br/><form action='/wifi?refresh=1' method='POST'><button name='refresh' value='1'>Refresh</button></form>";
+const char HTTP_SCAN_LINK[] PROGMEM = "<br/><form action='/wifi?refresh=1' method='POST'><button name='refresh' value='1'>Recarregar</button></form>";
 const char HTTP_SAVED[] PROGMEM = "<div class='msg'>Saving Credentials<br/>Trying to connect ESP to network.<br />If it fails reconnect to AP to try again</div>";
 const char HTTP_PARAMSAVED[] PROGMEM = "<div class='msg S'>Saved<br/></div>";
 const char HTTP_END[] PROGMEM = "</div></body></html>";
