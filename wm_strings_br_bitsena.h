@@ -54,12 +54,8 @@ const char *const HTTP_PORTAL_MENU[] PROGMEM = {
 };
 
 const char HTTP_PORTAL_OPTIONS[] PROGMEM =
-	"<form action='/wifi' method='get'><button>WiFi e Bitcoin</button></form><br/>\n"
-	"<form action='/info' method='get'><button>Informações</button></form><br/>\n"
-	"<form action='/exit' method='get'><button>Sair</button></form><br/>\n"
 	"<hr><br/>\n"
-	"<form action='/update' method='get'><button>Atualizar</button></form><br/>\n"
-	"<form action='/erase' method='get'><button class='D'>Restaurar Configurações de Fábrica</button></form><br/>\n";
+	"<div style='text-align:center;font-size:0.8em;margin-top:10px;'><a href='https://bitsena.com.br'>Todos os direitos reservados®<br/>BITSENA.COM.BR</a></div>\n";
 const char HTTP_ITEM_QI[] PROGMEM = "<div role='img' aria-label='{r}%' title='{r}%' class='q q-{q} {i} {h}'></div>";
 const char HTTP_ITEM_QP[] PROGMEM = "<div class='q {h}'>{r}%</div>";
 const char HTTP_ITEM[] PROGMEM = "<div><a href='#p' onclick='c(this)' data-ssid='{V}'>{v}</a>{qi}{qp}</div>";
