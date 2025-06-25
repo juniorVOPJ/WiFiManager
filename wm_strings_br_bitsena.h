@@ -16,7 +16,7 @@
 // !!! ABOVE WILL NOT WORK if you define in your sketch, must be build flag, if anyone one knows how to order includes to be able to do this it would be neat.. I have seen it done..
 
 // strings files must include a consts file!
-#include "wm_consts_en.h" // include constants, tokens, routes
+#include "wm_consts_br_bitsena.h" // include constants, tokens, routes
 
 const char WM_LANGUAGE[] PROGMEM = "pt-BR"; // i18n lang code
 
@@ -24,7 +24,7 @@ const char HTTP_HEAD_START[] PROGMEM = "<!DOCTYPE html>"
 									   "<html lang='pt'><head>"
 									   "<meta name='format-detection' content='telephone=no'>"
 									   "<meta charset='UTF-8'>"
-									   "<meta  name='viewport' content='width=device-width,initial-scale=1,user-scalable=no'/>"
+									   "<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no'/>"
 									   "<title>BITSENA</title>";
 
 const char HTTP_SCRIPT[] PROGMEM = "<script>function c(l){"
@@ -41,25 +41,28 @@ const char HTTP_HEAD_END[] PROGMEM = "</head><body class='{c}'><div class='wrap'
 const char HTTP_ROOT_MAIN[] PROGMEM = "<h1><a href=\"https://bitsena.com.br\">BITSENA</a></h1><h3>Configuração</h3>";
 
 const char *const HTTP_PORTAL_MENU[] PROGMEM = {
-	"<form action='/wifi'    method='get'><button>WiFi e Bitcoin</button></form><br/>\n",			 // MENU_WIFI
-	"<form action='/0wifi'   method='get'><button>WiFi e Bitcoin (sem scan)</button></form><br/>\n", // MENU_WIFINOSCAN
-	"<form action='/info'    method='get'><button>Informações</button></form><br/>\n",				 // MENU_INFO
-	"<form action='/param'   method='get'><button>Configurar</button></form><br/>\n",				 // MENU_PARAM
-	"<form action='/close'   method='get'><button>Fechar</button></form><br/>\n",					 // MENU_CLOSE
-	"<form action='/restart' method='get'><button>Reiniciar</button></form><br/>\n",				 // MENU_RESTART
-	"<form action='/exit'    method='get'><button>Sair</button></form><br/>\n",						 // MENU_EXIT
-	"<form action='/erase'   method='get'><button class='D'>Apagar</button></form><br/>\n",			 // MENU_ERASE
-	"<form action='/update'  method='get'><button>Atualizar</button></form><br/>\n",				 // MENU_UPDATE
-	"<hr><br/>"																						 // MENU_SEP
+	"<form action='/wifi'    method='get'><button>WiFi e Bitcoin</button></form><br/>\n",						  // MENU_WIFI
+	"<form action='/0wifi'   method='get'><button>WiFi e Bitcoin (sem scan)</button></form><br/>\n",			  // MENU_WIFINOSCAN
+	"<form action='/info'    method='get'><button>Informações</button></form><br/>\n",							  // MENU_INFO
+	"<form action='/param'   method='get'><button>Configurar</button></form><br/>\n",							  // MENU_PARAM
+	"<form action='/close'   method='get'><button>Fechar</button></form><br/>\n",								  // MENU_CLOSE
+	"<form action='/restart' method='get'><button>Reiniciar</button></form><br/>\n",							  // MENU_RESTART
+	"<form action='/exit'    method='get'><button>Sair</button></form><br/>\n",									  // MENU_EXIT
+	"<form action='/erase'   method='get'><button class='D'>Restaurar Padrões de Fábrica</button></form><br/>\n", // MENU_ERASE
+	"<form action='/update'  method='get'><button>Atualizar</button></form><br/>\n",							  // MENU_UPDATE
+	"<hr><br/>"																									  // MENU_SEP
 };
 
-// const char HTTP_PORTAL_OPTIONS[]   PROGMEM = strcat(HTTP_PORTAL_MENU[0] , HTTP_PORTAL_MENU[3] , HTTP_PORTAL_MENU[7]);
-const char HTTP_PORTAL_OPTIONS[] PROGMEM = "";
-const char HTTP_ITEM_QI[] PROGMEM = "<div role='img' aria-label='{r}%' title='{r}%' class='q q-{q} {i} {h}'></div>"; // rssi icons
-const char HTTP_ITEM_QP[] PROGMEM = "<div class='q {h}'>{r}%</div>";												 // rssi percentage {h} = hidden showperc pref
-const char HTTP_ITEM[] PROGMEM = "<div><a href='#p' onclick='c(this)' data-ssid='{V}'>{v}</a>{qi}{qp}</div>";		 // {q} = HTTP_ITEM_QI, {r} = HTTP_ITEM_QP
-// const char HTTP_ITEM[]            PROGMEM = "<div><a href='#p' onclick='c(this)'>{v}</a> {R} {r}% {q} {e}</div>"; // test all tokens
-
+const char HTTP_PORTAL_OPTIONS[] PROGMEM =
+	"<form action='/wifi' method='get'><button>WiFi e Bitcoin</button></form><br/>\n"
+	"<form action='/info' method='get'><button>Informações</button></form><br/>\n"
+	"<form action='/exit' method='get'><button>Sair</button></form><br/>\n"
+	"<hr><br/>\n"
+	"<form action='/update' method='get'><button>Atualizar</button></form><br/>\n"
+	"<form action='/erase' method='get'><button class='D'>Restaurar Configurações de Fábrica</button></form><br/>\n";
+const char HTTP_ITEM_QI[] PROGMEM = "<div role='img' aria-label='{r}%' title='{r}%' class='q q-{q} {i} {h}'></div>";
+const char HTTP_ITEM_QP[] PROGMEM = "<div class='q {h}'>{r}%</div>";
+const char HTTP_ITEM[] PROGMEM = "<div><a href='#p' onclick='c(this)' data-ssid='{V}'>{v}</a>{qi}{qp}</div>";
 const char HTTP_FORM_START[] PROGMEM = "<form method='POST' action='{v}'>";
 const char HTTP_FORM_WIFI[] PROGMEM = "<label for='s'>Rede WiFi</label><input id='s' name='s' maxlength='32' autocorrect='off' autocapitalize='none' placeholder='{v}'><br/><label for='p'>Senha da Rede WiFi</label><input id='p' name='p' maxlength='64' type='password' placeholder='{p}'><input type='checkbox' id='showpass' onclick='f()'> <label for='showpass'>Mostrar Senha</label><br/>";
 const char HTTP_FORM_WIFI_END[] PROGMEM = "";
@@ -70,10 +73,10 @@ const char HTTP_FORM_PARAM_HEAD[] PROGMEM = "<hr><br/>";
 const char HTTP_FORM_PARAM[] PROGMEM = "<br/><input id='{i}' name='{n}' maxlength='{l}' value='{v}' {c}>\n"; // do not remove newline!
 
 const char HTTP_SCAN_LINK[] PROGMEM = "<br/><form action='/wifi?refresh=1' method='POST'><button name='refresh' value='1'>Recarregar</button></form>";
-const char HTTP_SAVED[] PROGMEM = "<div class='msg'>Salvar Credenciais<br/>Tentando conectar o BITSENA à sua rede WiFi.<br />Se houver falha de conexão, conecte ao BITSENA novamente</div>";
+const char HTTP_SAVED[] PROGMEM = "<div class='msg'>Crededencias WiFi Salvas<br/><br/>Tentando conectar o BITSENA à sua rede WiFi.<br/><br/>Se houver falha de conexão, conecte ao BITSENA novamente</div>";
 const char HTTP_PARAMSAVED[] PROGMEM = "<div class='msg S'>Configurações Salvas<br/></div>";
 const char HTTP_END[] PROGMEM = "</div></body></html>";
-const char HTTP_ERASEBTN[] PROGMEM = "<br/><form action='/erase' method='get'><button class='D'>Apagar configuração WiFi</button></form>";
+const char HTTP_ERASEBTN[] PROGMEM = "<br/><form action='/erase' method='get'><button class='D'>Restaurar Padrões de Fábrica</button></form>";
 const char HTTP_UPDATEBTN[] PROGMEM = "<br/><form action='/update' method='get'><button>Atualizar</button></form>";
 const char HTTP_BACKBTN[] PROGMEM = "<hr><br/><form action='/' method='get'><button>Voltar</button></form>";
 
@@ -143,7 +146,7 @@ const char HTTP_HELP[] PROGMEM =
 	"<tr><td>/erase</td>"
 	"<td>Apague a configuração do WiFi e reinicie o dispositivo. O dispositivo não se reconectará a uma rede até que novos dados de configuração do WiFi sejam inseridos.</td></tr>"
 	"</table>"
-	"<p/>Site <a href='https://bitsena.com.br'>BITSENA.COM.BR</a>.";
+	"<p/>Site Oficial<a href='https://bitsena.com.br'>BITSENA.COM.BR</a>.";
 #else
 const char HTTP_HELP[] PROGMEM = "";
 #endif
@@ -203,8 +206,8 @@ const char HTTP_INFO_cpufreq[] PROGMEM = "<dt>CPU</dt><dd>{1}MHz</dd>";
 const char HTTP_INFO_apip[] PROGMEM = "<dt>BITSENA IP</dt><dd>{1}</dd>";
 const char HTTP_INFO_apmac[] PROGMEM = "<dt>BITSENA MAC</dt><dd>{1}</dd>";
 const char HTTP_INFO_apssid[] PROGMEM = "<dt>BITSENA SSID</dt><dd>{1}</dd>";
-const char HTTP_INFO_apbssid[] PROGMEM = "<dt>Nome da Rede</dt><dd>{1}</dd>";
-const char HTTP_INFO_stassid[] PROGMEM = "<dt>Rede WiFi</dt><dd>{1}</dd>";
+const char HTTP_INFO_apbssid[] PROGMEM = "<dt>WiFi MAC</dt><dd>{1}</dd>";
+const char HTTP_INFO_stassid[] PROGMEM = "<dt>Nome da Rede WiFi</dt><dd>{1}</dd>";
 const char HTTP_INFO_staip[] PROGMEM = "<dt>IP</dt><dd>{1}</dd>";
 const char HTTP_INFO_stagw[] PROGMEM = "<dt>Gateway</dt><dd>{1}</dd>";
 const char HTTP_INFO_stasub[] PROGMEM = "<dt>Subrede</dt><dd>{1}</dd>";
@@ -237,7 +240,7 @@ const char S_titleparam[] PROGMEM = "Configurações";
 const char S_titleparamsaved[] PROGMEM = "Configurações Salvas";
 const char S_titleexit[] PROGMEM = "Sair";
 const char S_titlereset[] PROGMEM = "Reiniciar";
-const char S_titleerase[] PROGMEM = "Apagar";
+const char S_titleerase[] PROGMEM = "Restaurar Configurações de Fábrica";
 const char S_titleclose[] PROGMEM = "Fechar";
 const char S_options[] PROGMEM = "options";
 const char S_nonetworks[] PROGMEM = "Nenhuma rede WiFi encontrada. Recarregue e tente novamente";
