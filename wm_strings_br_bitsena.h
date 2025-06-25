@@ -56,12 +56,12 @@ const char *const HTTP_PORTAL_MENU[] PROGMEM = {
 const char HTTP_PORTAL_OPTIONS[] PROGMEM =
 	"<form action='/wifi' method='get'><button>WiFi e Bitcoin</button></form><br/>\n"
 	"<form action='/info' method='get'><button>Informações</button></form><br/>\n"
-	"<form action='/exit' method='get'><button>Sair</button></form><br/>\n"
+	"<form action='/restart' method='get'><button>Reiniciar</button></form><br/>\n"
 	"<hr><br/>\n"
 	"<form action='/update' method='get'><button>Atualizar</button></form><br/>\n"
-	"<form action='/erase' method='get'><button class='D'>Restaurar Configurações de Fábrica</button></form><br/>\n"
+	"<form action='/erase' method='get'><button class='D'>Restaurar Padrões de Fábrica</button></form><br/>\n"
 	"<hr><br/>\n"
-	"<div style='text-align:center;font-size:0.8em;margin-top:10px;'><a href='https://bitsena.com.br'>Todos os direitos reservados® - BITSENA.COM.BR</a></div>\n";
+	"<div style='text-align:center;font-size:0.8em;margin-top:10px;'><a href='https://bitsena.com.br'>Todos os direitos reservados®<br/>BITSENA.COM.BR</a></div>\n";
 const char HTTP_ITEM_QI[] PROGMEM = "<div role='img' aria-label='{r}%' title='{r}%' class='q q-{q} {i} {h}'></div>";
 const char HTTP_ITEM_QP[] PROGMEM = "<div class='q {h}'>{r}%</div>";
 const char HTTP_ITEM[] PROGMEM = "<div><a href='#p' onclick='c(this)' data-ssid='{V}'>{v}</a>{qi}{qp}</div>";
@@ -141,14 +141,14 @@ const char HTTP_HELP[] PROGMEM =
 	"<td>OTA Atualização</td></tr>"
 	"<tr><td><a href='/close'>/close</a></td>"
 	"<td>Feche o pop-up do captiveportal, o portal de configuração permanecerá ativo</td></tr>"
-	"<tr><td>/exit</td>"
+	"<tr><td><a href='/exit'></td>"
 	"<td>Sair do Portal de Configuração, o Portal de Configuração será fechado</td></tr>"
-	"<tr><td>/restart</td>"
+	"<tr><td><a href='/restart'></td>"
 	"<td>Reiniciar o BITSENA</td></tr>"
-	"<tr><td>/erase</td>"
-	"<td>Apague a configuração do WiFi e reinicie o dispositivo. O dispositivo não se reconectará a uma rede até que novos dados de configuração do WiFi sejam inseridos.</td></tr>"
+	"<tr><td><a href='/erase'></td>"
+	"<td>Restaurar os padrões de fábrica. Apague a configuração do WiFi e reinicie o dispositivo. O dispositivo não se reconectará a uma rede até que novos dados de configuração do WiFi sejam inseridos.</td></tr>"
 	"</table>"
-	"<p/>Site Oficial<a href='https://bitsena.com.br'>BITSENA.COM.BR</a>.";
+	"<p/>Site Oficial <a href='https://bitsena.com.br'>BITSENA.COM.BR</a>";
 #else
 const char HTTP_HELP[] PROGMEM = "";
 #endif
@@ -242,7 +242,7 @@ const char S_titleparam[] PROGMEM = "Configurações";
 const char S_titleparamsaved[] PROGMEM = "Configurações Salvas";
 const char S_titleexit[] PROGMEM = "Sair";
 const char S_titlereset[] PROGMEM = "Reiniciar";
-const char S_titleerase[] PROGMEM = "Restaurar Configurações de Fábrica";
+const char S_titleerase[] PROGMEM = "Restaurar Padrões de Fábrica";
 const char S_titleclose[] PROGMEM = "Fechar";
 const char S_options[] PROGMEM = "options";
 const char S_nonetworks[] PROGMEM = "Nenhuma rede WiFi encontrada. Recarregue e tente novamente";
