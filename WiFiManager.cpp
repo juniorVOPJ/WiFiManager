@@ -1542,7 +1542,7 @@ void WiFiManager::handleRoot()
   str.replace(FPSTR(T_v), configPortalActive ? _apName : (getWiFiHostname() + " - " + WiFi.localIP().toString())); // use ip if ap is not active for heading @todo use hostname?
   page += str;
   page += FPSTR(HTTP_PORTAL_OPTIONS);
-  page += getMenuOut();
+  // page += getMenuOut();
   reportStatus(page);
   page += getHTTPEnd();
 
